@@ -1,4 +1,4 @@
-# COLLEGE ERP
+# STUDENT RESULT MANAGEMENT SYSTEM
 
 Student Result Management System using MERN Stack
 
