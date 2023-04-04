@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Appointment Form</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- component -->
+    <link rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- =======================================================
+  * Template Name: Medicio - v4.8.2
+  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+<section class=" py-1 bg-blueGray-50 ">
+      <div class="w-full lg:w-11/12 px-4 mx-auto mt-6">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6
+          shadow-lg rounded-lg bg-light-50 border-0">
+          <div class="text-center rounded-t bg-white mb-0 px-6 py-6">
+            <div class=" flex justify-center text-2xl">
+              <h6 class="text-red-700 text-uppercase fw-bolder underline underline-offset-4">
+                Marksheet 
+              </h6>
+            </div>
+          </div>
+          <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+            <form name="submit-to-google-sheet">
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Personal Details
+              </h6>
+              <div class="flex flex-wrap">
+              <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                  <label class="block uppercase tracking-wide text-blueGray-600
+                    text-xs font-bold mb-2" for="grid-state">
+                    Title
+                  </label>
+                  <div class="relative">
+                    <select class="w-full h-8 px-2 text-sm text-gray-700
+                      placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" id="grid-state" name="gender" required>
+                      <option >Mr.</option>
+                      <option >Ms.</option>
+                    </select>
+                  </div>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      PRN No
+                    </label>
+                    <input type="Number" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="16"
+                      placeholder="PRN No" name="prn" value="" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Seat No
+                    </label>
+                    <input type="number" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="5"
+                      placeholder="Seat No" name="seat_no" value="" >
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="50"
+                      placeholder="Name" name="name" value="" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                  <label class="block uppercase tracking-wide text-blueGray-600
+                    text-xs font-bold mb-2" for="grid-state">
+                    Month
+                  </label>
+                  <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline"
+                      placeholder="Month" name="month" value="" required>
+      
+                  </div>
+                </div>
+                <div class="w-full lg:w-3/12 px-4 justify-content py-3">
+                  <div class="relative w-full mb-3">
+                    <label for="formFileSm" class="block uppercase
+                      text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">Your Passport Size
+                      Photo</label>
+                    <input class="form-control
+                      w-full
+                      h-9
+                      text-gray-700
+                      bg-white
+                      rounded-lg
+                      transition
+                      ease-in-out" id="formFileSm" type="file" name="passport_size_photo">
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - CORE JAVA
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="Course_Credit" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="TH/PRACT"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="IA" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="Over-all" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+
+              
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - CORE JAVA (PRC.)
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="Course_Credit" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="TH/PRACT"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="IA" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="Over-all" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - INTRODUCTION TO EMBEDDED SYSTEM
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="Course_Credit" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - INTRODUCTION TO EMBEDDED SYSTEM (PRC.)
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - COMPUTER ORIENTED STATISTICAL TECHNIQUE
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - COMPUTER ORIENTED STATISTICAL TECHNIQUE (PRC.)
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - SOFTWARE ENGINEERING
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - SOFTWARE ENGINEERING (PRC.)
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - COMPUTER GRAPHICS
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-6 border-b-1 border-blueGray-300">
+
+              <h6 class="text-pink-400 text-sm mt-3 mb-6 font-bold
+                uppercase">
+                Course Title - COMPUTER GRAPHICS (PRC.)
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Name
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="CORE JAVA" name="course_name" required>
+                  </div>
+                </div>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Course Credit
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="1" 
+                      placeholder="Course Credit" name="attendant_name" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      TH/PRACT
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="TH/PRACT" name="attendent_phone_number"  required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      IA
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="IA" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Over-all
+                    </label>
+                    <input type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2"
+                      placeholder="Over-all" name="email_id" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Credit Earned(C)
+                    </label>
+                    <input  id="num1" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Credit Earned(C)" name="Credit_Earned" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      Grade Points(G)
+                    </label>
+                    <input id="num2" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" 
+                      placeholder="Grade Points(G)" name="Grade_Points" required>
+                  </div>
+                </div>
+                <div class="w-full lg:w-2/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label class="block uppercase text-blueGray-600 text-xs
+                      font-bold mb-2" htmlfor="grid-password">
+                      CG = C X G
+                    </label>
+                    <input onChange="doMath()" type="text" class="w-full h-8 px-2 text-sm
+                      text-gray-700 placeholder-gray-600 border rounded-lg
+                      focus:shadow-outline" maxlength="2" id="cg"
+                      placeholder="CG = C X G" name="Grade" required >
+                  </div>
+                </div>
+              </div>
+              
+
+
+                 <div class="w-full justify-center flex items-center my-8"> 
+                 
+                 <input  id="a" type="submit"  class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold" value="Submit">
+                 </div>   
+              </form>
+            </div>
+          </div>
+          <footer class="relative pt-8 pb-6 mt-2">
+            <div class="container mx-auto px-4">
+              <div class="flex flex-wrap items-center md:justify-between
+                justify-center">
+                <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+                  <div class="text-sm text-blueGray-500 font-semibold py-1">
+                    <p>SRMS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+</section>
+<script>
+  function doMath(){
+    var numOne = document.getElementById('num1').value;
+    var numTwo = document.getElementById('num2').value;
+    var cg = document.getElementById('cg');
+    var p = numOne * numTwo;  
+    cg.innerHTML = p;
+  }
+</script>
+</body>
+</html>
