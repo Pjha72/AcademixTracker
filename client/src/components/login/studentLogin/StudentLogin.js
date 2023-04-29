@@ -88,6 +88,8 @@ const StudentLogin = () => {
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                pattern="^(?=.*[A-Z])(?=.*[@])(?=.*\d).{6,}$"
+                title="USE ONE : @-Number-UpperCase (at least 6 character)"
                 required
                 type={showPassword ? "text" : "password"}
                 className=" bg-[#515966] text-white rounded-lg outline-none py-2  placeholder:text-sm"
