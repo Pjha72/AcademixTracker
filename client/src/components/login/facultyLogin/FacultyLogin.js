@@ -88,6 +88,8 @@ const FacultyLogin = () => {
             <div className="bg-[#515966] rounded-lg px-2 flex  items-center">
               <input
                 onChange={(e) => setPassword(e.target.value)}
+                pattern="^(?=.*[A-Z])(?=.*[@])(?=.*\d).{6,}$"
+                title="USE ONE : @-Number-UpperCase (at least 6 character)"
                 value={password}
                 required
                 type={showPassword ? "text" : "password"}
