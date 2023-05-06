@@ -24,8 +24,10 @@ import FacultyPassword from "./components/faculty/profile/update/password/Passwo
 import FacultyUpdate from "./components/faculty/profile/update/Update";
 import UploadMarks from "./components/faculty/uploadMarks/UploadMarks";
 import AdminLogin from "./components/login/adminLogin/AdminLogin";
+import AdminRegister from "./components/register/adminRegister/AdminRegister";
 import FacultyLogin from "./components/login/facultyLogin/FacultyLogin";
 import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 import StudentLogin from "./components/login/studentLogin/StudentLogin";
 import StudentFirstTimePassword from "./components/student/profile/update/firstTimePassword/FirstTimePassword";
@@ -47,10 +49,12 @@ const App = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Login />} />
+      <Route exact path="/register" element={<Register />} />
 
       {/* Admin  */}
 
       <Route path="/login/adminlogin" element={<AdminLogin />} />
+      <Route path="/register/admin-register" element={<AdminRegister />} />
       <Route path="/admin/home" element={<AdminHome />} />
       <Route path="/admin/profile" element={<AdminProfile />} />
       <Route path="/admin/update" element={<AdminUpdate />} />
