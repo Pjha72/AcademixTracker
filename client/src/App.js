@@ -31,6 +31,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 
 import StudentLogin from "./components/login/studentLogin/StudentLogin";
+import StudentRegister from "./components/register/studentRegister/StudentRegister";
 import StudentFirstTimePassword from "./components/student/profile/update/firstTimePassword/FirstTimePassword";
 import StudentHome from "./components/student/StudentHome";
 import StudentProfile from "./components/student/profile/Profile";
@@ -95,6 +96,7 @@ const App = () => {
       {/* Student  */}
 
       <Route path="/login/studentlogin" element={<StudentLogin />} />
+      <Route path="/register/student-register" element={<StudentRegister />} />
       <Route path="/student/home" element={<StudentHome />} />
       <Route path="/student/password" element={<StudentFirstTimePassword />} />
       <Route path="/student/profile" element={<StudentProfile />} />
