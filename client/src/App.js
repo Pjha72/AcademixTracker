@@ -26,6 +26,7 @@ import UploadMarks from "./components/faculty/uploadMarks/UploadMarks";
 import AdminLogin from "./components/login/adminLogin/AdminLogin";
 import AdminRegister from "./components/register/adminRegister/AdminRegister";
 import FacultyLogin from "./components/login/facultyLogin/FacultyLogin";
+import FacultyRegister from "./components/register/facultyRegister/FacultyRegister";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 
@@ -81,6 +82,7 @@ const App = () => {
       {/* Faculty  */}
 
       <Route path="/login/facultylogin" element={<FacultyLogin />} />
+      <Route path="/register/faculty-register" element={<FacultyRegister />} />
       <Route path="/faculty/home" element={<FacultyHome />} />
       <Route path="/faculty/password" element={<FacultyFirstTimePassword />} />
       <Route path="/faculty/profile" element={<FacultyProfile />} />
