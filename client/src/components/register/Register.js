@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Login = () => {
+const Register = () => {
   return (
     <div
       className="h-screen w-screen backdrop-blur-md flex  justify-center"
@@ -20,29 +20,21 @@ const Login = () => {
             <h1 className="text-4xl font-extrabold">Admin</h1>
             <Link
               type="button"
-              to="/login/adminlogin"
-              className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
-            >
-              Login
-            </Link>
-            <Link
-              type="button"
               to="/register/admin-register"
               className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
             >
               Register
             </Link>
-          </div>
-          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#5a51d6] bg-opacity-60 rounded-xl">
-            <h1 className="text-4xl font-extrabold">Faculty</h1>
-
             <Link
               type="button"
-              to="/login/facultylogin"
+              to="/login/adminlogin"
               className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
             >
               Login
             </Link>
+          </div>
+          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#5a51d6] bg-opacity-60 rounded-xl">
+            <h1 className="text-4xl font-extrabold">Faculty</h1>
             <Link
               type="button"
               to="/register/faculty-register"
@@ -50,22 +42,29 @@ const Login = () => {
             >
               Register
             </Link>
-          </div>
-          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#d65158] bg-opacity-60 rounded-xl">
-            <h1 className="text-4xl font-extrabold">Student</h1>
             <Link
               type="button"
-              to="/login/studentlogin"
+              to="/login/facultylogin"
               className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
             >
               Login
             </Link>
+          </div>
+          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#d65158] bg-opacity-60 rounded-xl">
+            <h1 className="text-4xl font-extrabold">Student</h1>
             <Link
               type="button"
               to="/register/student-register"
               className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
             >
               Register
+            </Link>
+            <Link
+              type="button"
+              to="/login/studentlogin"
+              className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200"
+            >
+              Login
             </Link>
           </div>
         </div>
@@ -74,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
