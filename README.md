@@ -10,13 +10,19 @@ Student Result Management System using MERN Stack
 
 # TechStack
 
-1. Reactjs
-2. Tailwind CSS
-3. MongoDB
-4. Express.js
-5. Redux
-6. Material UI Icons
-7. JWT
+ __1. Reactjs :__ React.js is a popular JavaScript library for building user interfaces. It's used for build single page applications.
+
+__2. Tailwind CSS :__ Tailwind CSS is a utility-first CSS framework that allows you to rapidly build custom user interfaces. It provides a set of pre-defined CSS classes that you can use to style your HTML elements without writing any CSS from scratch. And also you can use your own classes for style in tailwind.css.
+
+__3. MongoDB :__ MongoDB is a popular open-source document-oriented NoSQL database that is designed for high availability, scalability, and performance. It stores data in flexible, JSON-like documents, which makes it easy to work with for developers who are familiar with JavaScript and object-oriented programming.
+
+__4. Express.js :__ Express.js is a popular open-source framework for building web applications and APIs with Node.js. It provides a set of robust and flexible features for creating HTTP servers and handling requests and responses, making it easier to develop web applications in Node.js.
+
+__5. Redux :__ Redux is a popular JavaScript library for managing the state of web applications. It provides a predictable state container that can be used to store and manage application data in a single place. Mostly redux used with React.js.
+
+__6. Material UI Icons :__ Material UI Icons is a popular icon library for React.js that provides a wide range of icons to use in web applications. It is a part of the Material-UI library, which is a collection of React components that implement Google's Material Design guidelines.
+
+__7. JWT :__ JWT (JSON Web Token) is a popular open standard for securely transmitting information between parties as a JSON object. It is commonly used for authentication and authorization in web applications and APIs.
 
 # Features
 
