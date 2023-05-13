@@ -1,27 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addAdmin } from "../../../redux/actions/adminActions";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../utils/Spinner";
 
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm, Controller } from "react-hook-form";
+
+const schema = yup
+  .object({
+    dob: yup.string().required(),
+    name: yup.string().required(),
+    avatar: yup.string().required(),
+    username: yup.string().required(),
+    password: yup.string().required(),
+    department: yup.string().required(),
+    joiningYear: yup.string().required(),
+    contactNumber: yup.string().required(),
+    email: yup.string().email().required(),
+  })
+  .required();
+
+const defaultValues = {
+  dob: "",
+  name: "",
+  email: "",
+  avatar: "",
+  username: "",
+  password: "",
+  department: "",
+  joiningYear: "",
+  showPassword: "",
+  contactNumber: "",
+};
+
 const AdminRegister = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState({});
-  const [avatar, setAvatar] = useState("");
-  const [dob, setDob] = useState(new Date());
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [department, setDepartment] = useState("");
   const [translate, setTranslate] = useState(false);
-  const [contactNumber, setContactNumber] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [joiningYear, setJoiningYear] = useState(new Date());
 
   const dispatch = useDispatch();
-  const store = useSelector((state) => state);
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues,
+    resolver: yupResolver(schema),
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,15 +58,20 @@ const AdminRegister = () => {
     }, 1000);
   }, []);
 
-  useEffect(() => {
-    if (store.errors) {
-      setError(store.errors);
-    }
-  }, [store.errors]);
-
-  const register = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     setLoading(true);
+
+    const {
+      dob,
+      name,
+      email,
+      avatar,
+      username,
+      password,
+      department,
+      contactNumber,
+      joiningYear,
+    } = data;
 
     dispatch(
       addAdmin({
@@ -54,21 +88,6 @@ const AdminRegister = () => {
     );
   };
 
-  useEffect(() => {
-    if (store.errors) {
-      setName("");
-      setEmail("");
-      setAvatar("");
-      setUsername("");
-      setPassword("");
-      setLoading(false);
-      setDepartment("");
-      setDob(new Date());
-      setShowPassword("");
-      setContactNumber("");
-      setJoiningYear(new Date().getFullYear());
-    }
-  }, [store.errors]);
   return (
     <div className="bg-[#04bd7d] h-screen w-screen flex items-center justify-center">
       <a href="/">
@@ -89,7 +108,7 @@ const AdminRegister = () => {
           </h1>
         </div>
         <form
-          onSubmit={register}
+          onSubmit={handleSubmit(onSubmit)}
           className={`h-[36rem] w-full bg-[#2c2f35] grid grid-cols-2 gap-4 p-[2rem] ${
             translate ? "-translate-x-[12rem]" : ""
           }  duration-1000 transition-all rounded-3xl shadow-2xl`}
@@ -99,126 +118,205 @@ const AdminRegister = () => {
           </h1>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Name</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                type="text"
-                value={name}
-                placeholder="John Doe"
-                onChange={(e) => setName(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.name ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="name"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Email</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                type="email"
-                value={email}
-                placeholder="johndoe@email.com"
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.email ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="email"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="text"
+                    placeholder="johndoe@email.com"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Username</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                onChange={(e) => setUsername(e.target.value)}
-                value={username}
-                type="text"
-                required
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
-                placeholder="Username"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.username ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="username"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Password</p>
             <div className="bg-[#515966] rounded-lg px-2 flex  items-center">
-              <input
-                required
-                value={password}
-                placeholder="Password"
-                type={showPassword ? "text" : "password"}
-                pattern="^(?=.*[A-Z])(?=.*[@])(?=.*\d).{6,}$"
-                onChange={(e) => setPassword(e.target.value)}
-                title="USE ONE : @-Number-UpperCase (at least 6 character)"
-                className="bg-[#515966] text-white rounded-lg outline-none py-2  placeholder:text-sm"
+              <Controller
+                name="password"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <>
+                    <input
+                      placeholder="Password"
+                      type={showPassword ? "text" : "password"}
+                      pattern="^(?=.*[A-Z])(?=.*[@])(?=.*\d).{6,}$"
+                      title="USE ONE : @-Number-UpperCase (at least 6 character)"
+                      className="bg-[#515966] text-white rounded-lg outline-none py-2  placeholder:text-sm"
+                      {...field}
+                    />
+                    {showPassword ? (
+                      <VisibilityIcon
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="cursor-pointer"
+                      />
+                    ) : (
+                      <VisibilityOffIcon
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="cursor-pointer"
+                      />
+                    )}
+                  </>
+                )}
               />
-              {showPassword ? (
-                <VisibilityIcon
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="cursor-pointer"
-                />
-              ) : (
-                <VisibilityOffIcon
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="cursor-pointer"
-                />
-              )}
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">DOB</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                value={dob}
-                type="date"
-                onChange={(e) => setDob(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.dob ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="dob"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="text"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Department</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                type="text"
-                value={department}
-                onChange={(e) => setDepartment(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.department ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="department"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="text"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Contact Number</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                type="number"
-                value={contactNumber}
-                onChange={(e) => setContactNumber(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.contactNumber ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                control={control}
+                name="contactNumber"
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="number"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Joining Date</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
-              <input
-                required
-                value={joiningYear}
-                type="date"
-                onChange={(e) => setJoiningYear(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-[14rem] flex  items-center ${
+                errors.joiningYear ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                control={control}
+                name="joiningYear"
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="date"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
           <div className="space-y-1 col-span-2">
             <p className="text-[#515966] font-bold text-sm">Avatar</p>
-            <div className="bg-[#515966] rounded-lg w-full flex items-center">
-              <input
-                required
-                type="file"
-                value={avatar}
-                onChange={(e) => setAvatar(e.target.value)}
-                className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+            <div
+              className={`bg-[#515966] rounded-lg w-full flex  items-center ${
+                errors.avatar ? "border border-red-500" : ""
+              }`}
+            >
+              <Controller
+                name="avatar"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <input
+                    type="file"
+                    className="bg-[#515966] text-white px-2 outline-none py-2 rounded-lg placeholder:text-sm"
+                    {...field}
+                  />
+                )}
               />
             </div>
           </div>
@@ -236,11 +334,6 @@ const AdminRegister = () => {
               color="#ffffff"
               messageColor="#fff"
             />
-          )}
-          {(error.usernameError || error.passwordError) && (
-            <p className="text-red-500">
-              {error.usernameError || error.passwordError}
-            </p>
           )}
         </form>
       </div>
